@@ -1,0 +1,7 @@
+Name: KoLiber.Module.Layouts.SmartGrid
+AntiForgery: enabled
+Author: Tomasz Malinowski
+Website: https://github.com/Yaevh/KoLiber.Module.Layouts.SmartGrid
+Version: 0.1
+OrchardVersion: 1.10
+Description: Adds a SmartGrid element to Orchard.Layouts
