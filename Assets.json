@@ -1,6 +1,15 @@
 [
-    {
-        "inputs": [ "Assets/Styles.less" ],
-        "output": "Styles/Styles.css"
-    }
+  {
+    "inputs": [
+      "Assets/Elements/SmartGrid/Style.less"
+    ],
+    "output": "Styles/SmartGridElement.css"
+  },
+  {
+    "inputs": [
+      "Assets/Elements/SmartGrid/Directive.js",
+      "Assets/Elements/SmartGrid/Model.js"
+    ],
+    "output": "Scripts/SmartGridElement.js"
+  }
 ]

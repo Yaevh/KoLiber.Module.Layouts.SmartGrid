@@ -5,9 +5,9 @@ namespace KoLiber.Module.Layouts.SmartGrid.Elements {
 
     public class SmartGrid : Container {
 
-        public override string Category => "Demo";
+        public override string Category { get { return "Layout"; } }
 
-        public override string ToolboxIcon => "\uf03e";
+        public override string ToolboxIcon { get { return "\uf03e"; } }
 
         public int? BackgroundImageId
         {
@@ -19,6 +19,12 @@ namespace KoLiber.Module.Layouts.SmartGrid.Elements {
         {
             get { return this.Retrieve(x => x.BackgroundSize); }
             set { this.Store(x => x.BackgroundSize, value); }
+        }
+
+        public string CustomClass
+        {
+            get { return this.Retrieve(x => x.CustomClass); }
+            set { this.Store(x => x.CustomClass, value); }
         }
     }
 

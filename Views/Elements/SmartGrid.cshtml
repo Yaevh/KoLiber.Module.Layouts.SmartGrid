@@ -10,11 +10,15 @@
     var backgroundImage = (ImagePart)Model.BackgroundImage;
     if (backgroundImage != null) {
         var mediaPart = backgroundImage.As<MediaPart>();
-        var backgroundSize = !String.IsNullOrWhiteSpace(element.BackgroundSize)
+        var backgroundSize = !string.IsNullOrWhiteSpace(element.BackgroundSize)
             ? element.BackgroundSize
             : "cover";
+        var customClass = !string.IsNullOrWhiteSpace(element.CustomClass)
+            ? element.CustomClass
+            : "container";
 
-        tagBuilder.Attributes["style"] = String.Format("background‐image:  url('{0}'); background‐size: {1};", mediaPart.MediaUrl, backgroundSize);
+        tagBuilder.Attributes["style"] = String.Format("background‐image: url('{0}'); background‐size: {1};", mediaPart.MediaUrl, backgroundSize);
+        tagBuilder.AddCssClass(customClass);
     }
 }
 

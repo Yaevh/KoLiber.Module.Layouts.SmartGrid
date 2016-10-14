@@ -36,6 +36,7 @@
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>..\..\..\OrchardBasicCorrectness.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>5</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -95,6 +96,10 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Elements\SmartGrid\Directive.js" />
+    <Content Include="Assets\Elements\SmartGrid\Model.js" />
+    <Content Include="Scripts\SmartGridElement.js" />
+    <Content Include="Scripts\SmartGridElement.min.js" />
     <Content Include="Web.config" />
     <Content Include="Assets.json" />
     <Content Include="Scripts\Web.config" />
@@ -129,9 +134,19 @@
   <ItemGroup>
     <Compile Include="Drivers\SmartGridDriver.cs" />
     <Compile Include="Elements\SmartGrid.cs" />
+    <Compile Include="Handlers\SmartGridModelMap.cs" />
+    <Compile Include="Handlers\SmartGridResourceRegistrations.cs" />
+    <Compile Include="ResourceManifests\SmartGridResourceManifest.cs" />
+    <Compile Include="ViewModels\SmartGridViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Elements\SmartGrid.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\EditorTemplates\Elements\SmartGrid.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\LayoutEditor.Template.SmartGrid.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
